@@ -3,7 +3,8 @@
     <body>
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark" layout:fragment="nav">
         <div class="container">
-           <a class="navbar-brand" th:href="@{/topics}">                <img src="/images/icons/logo.png" th:src="@{/images/icons/logo.png}" class="brand">
+           <a class="navbar-brand" th:href="@{/topics}">
+                <img src="/images/icons/logo.png" th:src="@{/images/icons/logo.png}" class="brand">
            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,6 +13,11 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                    <th:block sec:authorize="isAuthenticated()">
+					   <li class="nav-item">
+       <a class="nav-link" th:href="@{/calendars}">
+         <img src="/images/icons/calendar.png" th:src="@{/images/icons/calendar.png}">
+       </a>
+     </li>
                         <li class="nav-item">
                            <a class="nav-link" th:href="@{/favorites}">
                                 <img src="/images/icons/heart.png" th:src="@{/images/icons/heart.png}">
@@ -40,8 +46,8 @@
                                 <img src="/images/icons/login.png" th:src="@{/images/icons/login.png}">
                            </a>
                         </li>
-                  </th:block>
-                </ul>     
+                   </th:block>
+                </ul>
                 </div>
             </div>
         </nav>
@@ -51,4 +57,4 @@
             </ul>
         </div>
     </body>
-</html>
+</html>        
